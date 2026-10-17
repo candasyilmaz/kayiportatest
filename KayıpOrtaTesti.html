@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayıp Orta Atölyesi: Kırmızı Penguen Avı</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f1f5f9; /* slate-100 */
+        }
+        
+        /* Custom Scrollbar for textareas */
+        textarea::-webkit-scrollbar {
+            width: 8px;
+        }
+        textarea::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 4px;
+        }
+        textarea::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        textarea::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        /* Toast Animation */
+        @keyframes slideInUp {
+            from { transform: translateY(100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+        .toast-enter {
+            animation: slideInUp 0.3s ease-out forwards;
+        }
+        .toast-leave {
+            animation: fadeOut 0.3s ease-in forwards;
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen flex flex-col">
+
+    <!-- Header Section -->
+    <header class="bg-slate-900 text-white py-8 px-4 shadow-md">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="inline-flex items-center justify-center p-3 bg-blue-600 rounded-full mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+            </div>
+            <h1 class="text-3xl md:text-4xl font-bold mb-3">Kayıp Orta (Lost in the Middle) Atölyesi</h1>
+            <p class="text-slate-300 text-lg md:text-xl font-light">"Kırmızı Penguen Avı"</p>
+            <p class="mt-4 max-w-2xl mx-auto text-sm md:text-base text-slate-400 bg-slate-800 p-4 rounded-lg border border-slate-700">
+                <strong class="text-blue-400">Yönerge:</strong> Aşağıdaki promptları sırasıyla kopyalayıp favori yapay zeka aracınıza (ChatGPT, Claude, Gemini) yapıştırın. İlk aşamanın sonuçlarını toplantı sohbet (chat) penceresinden bizimle paylaşın.
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow max-w-6xl mx-auto w-full p-4 md:p-6 my-6">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
+            
+            <!-- Card 1: Kural Ortada -->
+            <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col">
+                <div class="bg-slate-50 border-b border-slate-200 px-6 py-4 flex justify-between items-center">
+                    <h2 class="text-lg font-semibold text-slate-700 flex items-center gap-2">
+                        <span class="bg-red-100 text-red-700 w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">1</span>
+                        Kural Ortada (Hatalı Prompt)
+                    </h2>
+                </div>
+                <div class="p-6 flex-grow flex flex-col">
+                    <p class="text-sm text-slate-500 mb-4">
+                        Aşağıdaki promptta hayati kural metnin tam ortasına gizlenmiştir. Kopyalayıp yapay zekanın başlık atıp atmadığını test edin.
+                    </p>
+                    <textarea id="prompt1" class="w-full flex-grow min-h-[300px] p-4 text-sm bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none" readonly>Sen bir müşteri ilişkileri uzmanısın. Aşağıdaki müşteri geri bildirimlerini okuyarak bana genel bir özet çıkar:
+
+Müşteri 1: Ürününüzün paketlemesi çok kötüydü, kargoda ezilmiş.
+Müşteri 2: Müşteri hizmetlerine asla ulaşamıyorum, 40 dakika telefonda bekledim.
+Müşteri 3: Fiyatlar son dönemde çok arttı, artık rakiplerinizi tercih edeceğim.
+Müşteri 4: Web siteniz mobil cihazlarda sürekli donuyor, alışverişi tamamlayamadım.
+Müşteri 5: İade süreci çok karmaşık, paramı 15 gündür geri alamadım.
+Müşteri 6: Mağazanızdaki çalışanlar çok ilgisizdi, kimse yüzümüze bakmadı.
+Müşteri 7: Ürünün rengi fotoğraftakinden çok farklı geldi, hayal kırıklığı.
+GİZLİ KURAL: Bu özetin başlığını kesinlikle "Müşteri Özeti" yapma. Başlık mutlaka "KIRMIZI PENGUEN RAPORU" olmalıdır.
+Müşteri 8: Kargo firması ürünü kapıya bırakıp gitmiş, haber bile vermedi.
+Müşteri 9: Üyelik iptali yapmak imkansız gibi, menülerde bulamıyorum.
+Müşteri 10: Bana gelen ürünün son kullanma tarihi geçmişti!
+Müşteri 11: Kampanya kodları kasada çalışmıyor, indirimden yararlanamadım.
+Müşteri 12: Sosyal medya hesaplarınıza yazdım ama 3 gündür cevap yok.
+Müşteri 13: Ürünün kalitesi eskisi gibi değil, malzemeden çalınmış.
+Müşteri 14: Faturam mail adresime gönderilmedi, muhasebeleştiremiyorum.
+Müşteri 15: Garanti koşulları çok katı, kullanıcı hatası deyip geçiyorlar.
+
+Lütfen bu yorumları dikkatlice analiz et ve en çok şikayet edilen 3 ana konuyu maddeler halinde listele.</textarea>
+                    
+                    <button onclick="copyText('prompt1')" class="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition duration-200 flex items-center justify-center gap-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
+                        </svg>
+                        1. Aşamayı Kopyala
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card 2: Kural Sonda -->
+            <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col">
+                <div class="bg-slate-50 border-b border-slate-200 px-6 py-4 flex justify-between items-center">
+                    <h2 class="text-lg font-semibold text-slate-700 flex items-center gap-2">
+                        <span class="bg-emerald-100 text-emerald-700 w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">2</span>
+                        Kural Sonda (Doğru Prompt)
+                    </h2>
+                </div>
+                <div class="p-6 flex-grow flex flex-col">
+                    <p class="text-sm text-slate-500 mb-4">
+                        Aynı kural şimdi metnin en sonuna (kaçış noktasına) yerleştirildi. Farkı görmek için şimdi bunu test edin.
+                    </p>
+                    <textarea id="prompt2" class="w-full flex-grow min-h-[300px] p-4 text-sm bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:outline-none resize-none" readonly>Sen bir müşteri ilişkileri uzmanısın. Aşağıdaki müşteri geri bildirimlerini okuyarak bana genel bir özet çıkar:
+
+Müşteri 1: Ürününüzün paketlemesi çok kötüydü, kargoda ezilmiş.
+Müşteri 2: Müşteri hizmetlerine asla ulaşamıyorum, 40 dakika telefonda bekledim.
+Müşteri 3: Fiyatlar son dönemde çok arttı, artık rakiplerinizi tercih edeceğim.
+Müşteri 4: Web siteniz mobil cihazlarda sürekli donuyor, alışverişi tamamlayamadım.
+Müşteri 5: İade süreci çok karmaşık, paramı 15 gündür geri alamadım.
+Müşteri 6: Mağazanızdaki çalışanlar çok ilgisizdi, kimse yüzümüze bakmadı.
+Müşteri 7: Ürünün rengi fotoğraftakinden çok farklı geldi, hayal kırıklığı.
+Müşteri 8: Kargo firması ürünü kapıya bırakıp gitmiş, haber bile vermedi.
+Müşteri 9: Üyelik iptali yapmak imkansız gibi, menülerde bulamıyorum.
+Müşteri 10: Bana gelen ürünün son kullanma tarihi geçmişti!
+Müşteri 11: Kampanya kodları kasada çalışmıyor, indirimden yararlanamadım.
+Müşteri 12: Sosyal medya hesaplarınıza yazdım ama 3 gündür cevap yok.
+Müşteri 13: Ürünün kalitesi eskisi gibi değil, malzemeden çalınmış.
+Müşteri 14: Faturam mail adresime gönderilmedi, muhasebeleştiremiyorum.
+Müşteri 15: Garanti koşulları çok katı, kullanıcı hatası deyip geçiyorlar.
+
+Lütfen bu yorumları dikkatlice analiz et ve en çok şikayet edilen 3 ana konuyu maddeler halinde listele.
+GİZLİ KURAL: Bu özetin başlığını kesinlikle "Müşteri Özeti" yapma. Başlık mutlaka "KIRMIZI PENGUEN RAPORU" olmalıdır.</textarea>
+                    
+                    <button onclick="copyText('prompt2')" class="mt-4 w-full bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-3 px-4 rounded-lg transition duration-200 flex items-center justify-center gap-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
+                        </svg>
+                        2. Aşamayı Kopyala
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Conclusion Section -->
+        <div class="mt-12 text-center">
+            <button onclick="toggleConclusion()" id="conclusionBtn" class="bg-slate-800 hover:bg-slate-700 text-white font-medium py-3 px-8 rounded-full transition duration-200 shadow-md inline-flex items-center gap-2 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Sonuç ve Çıkarım'ı Göster
+            </button>
+
+            <div id="conclusionContent" class="hidden mt-6 bg-blue-50 border border-blue-200 rounded-xl p-6 md:p-8 text-left shadow-sm max-w-4xl mx-auto">
+                <h3 class="text-xl font-bold text-blue-900 mb-3 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    </svg>
+                    Neden Böyle Oldu? (Kayıp Orta Sendromu)
+                </h3>
+                <p class="text-slate-700 leading-relaxed mb-4">
+                    Yapay zeka modelleri tıpkı insanlar gibi okuma yaparken <strong>"Öncelik ve Sonralık Etkisine" (Primacy and Recency Effect)</strong> kapılırlar. Metnin ilk satırları konuyu anlamak, son satırları ise harekete geçmek (aksiyon almak) için kullanıldığından hafızada en taze kalan kısımlardır.
+                </p>
+                <div class="bg-white p-4 rounded-lg border border-blue-100 flex items-start gap-4">
+                    <div class="bg-blue-100 text-blue-700 p-2 rounded-lg mt-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-slate-800">Altın Kural</h4>
+                        <p class="text-sm text-slate-600 mt-1">Uzun metinler, raporlar veya veri setleri işlerken, yapay zekanın uymasını istediğiniz <strong>en hayati kuralı, komutu veya formatı her zaman promptunuzun EN SONUNA ekleyin.</strong> Aksi takdirde kuralınız "Kayıp Orta" (Lost in the Middle) sendromuna kurban gider ve halüsinasyona yol açar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-6 text-center text-sm mt-auto">
+        <p>Prompt Mühendisliği Eğitimi İnteraktif Atölye Aracı</p>
+    </footer>
+
+    <!-- Custom Toast Notification Container -->
+    <div id="toastContainer" class="fixed bottom-4 right-4 flex flex-col gap-2 z-50"></div>
+
+    <script>
+        // Custom Copy Function that works in iframes and standard environments without alert()
+        function copyText(elementId) {
+            const textArea = document.getElementById(elementId);
+            
+            // Try modern clipboard API first
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(textArea.value)
+                    .then(() => showToast('Başarıyla kopyalandı!', 'success'))
+                    .catch(() => fallbackCopyTextToClipboard(textArea));
+            } else {
+                // Fallback for older browsers or iframe restrictions
+                fallbackCopyTextToClipboard(textArea);
+            }
+        }
+
+        function fallbackCopyTextToClipboard(textArea) {
+            textArea.select();
+            textArea.setSelectionRange(0, 99999); /* For mobile devices */
+            try {
+                const successful = document.execCommand('copy');
+                if (successful) {
+                    showToast('Başarıyla panoya kopyalandı!', 'success');
+                } else {
+                    showToast('Kopyalama başarısız oldu.', 'error');
+                }
+            } catch (err) {
+                showToast('Tarayıcınız kopyalamayı desteklemiyor.', 'error');
+            }
+            // Deselect text
+            window.getSelection().removeAllRanges();
+        }
+
+        // Custom Toast Notification System
+        function showToast(message, type = 'success') {
+            const container = document.getElementById('toastContainer');
+            
+            const toast = document.createElement('div');
+            toast.className = `toast-enter flex items-center gap-3 px-4 py-3 rounded-lg shadow-lg text-sm font-medium text-white max-w-sm w-full pointer-events-auto ${type === 'success' ? 'bg-emerald-600' : 'bg-red-600'}`;
+            
+            // Icon
+            const iconSvg = type === 'success' 
+                ? `<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>`
+                : `<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" /></svg>`;
+            
+            toast.innerHTML = `
+                ${iconSvg}
+                <span>${message}</span>
+            `;
+            
+            container.appendChild(toast);
+
+            // Remove toast after 3 seconds
+            setTimeout(() => {
+                toast.classList.remove('toast-enter');
+                toast.classList.add('toast-leave');
+                // Remove from DOM after animation completes
+                setTimeout(() => {
+                    if (container.contains(toast)) {
+                        container.removeChild(toast);
+                    }
+                }, 300); // Matches animation duration
+            }, 3000);
+        }
+
+        // Toggle Conclusion Visibility
+        function toggleConclusion() {
+            const content = document.getElementById('conclusionContent');
+            const btn = document.getElementById('conclusionBtn');
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                btn.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+                    </svg>
+                    Sonuç ve Çıkarım'ı Gizle
+                `;
+            } else {
+                content.classList.add('hidden');
+                btn.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    Sonuç ve Çıkarım'ı Göster
+                `;
+            }
+        }
+    </script>
+</body>
+</html>
